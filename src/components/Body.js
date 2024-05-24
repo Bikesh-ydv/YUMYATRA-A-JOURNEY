@@ -56,23 +56,40 @@ const Body = () => {
       
      async function fetchrestaurants(){
      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING")
-      const json = await data.json();
-      console.log(json);
-      console.log(json.data.cards[1].card.card.gridElements.infoWithStyle
-        .restaurants);
-     setallRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants);
-     setfilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants);   
-    
+
+     const json = await data.json();  
+
+     async function checkJsonData(jsonData) {
+
+      for (let i = 0; i < jsonData?.data?.cards.length; i++) {
+
+        // initialize checkData for Swiggy Restaurant data
+        let checkData = json?.data?.cards[i]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+        // if checkData is not undefined then return it
+        if (checkData !== undefined) {
+          return checkData;
+        }
+      }
+    }
+
+    const resData = await checkJsonData(json);
+      
+      // console.log(json);
+      // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    //  setallRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    //         // console.log(setallRestaurant);
+    //  setfilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);   
+          setallRestaurant(resData);
+          setfilteredRestaurants(resData);
+
      }
 
-   //   if(filteredRestaurants?.length===0)
-   //      return <h1>No restaurants found!!!</h1>
+   //  
 
   
 
-    return (allRestaurant.length===0)? <Shimmer/> :(
+    return (allRestaurant?.length === 0)? <Shimmer/> :(
        
        <div>
             
@@ -122,14 +139,15 @@ const Body = () => {
 
             <div className="flex gap-8 flex-wrap mt-10 2xl:justify-start justify-center">
               {
-              filteredRestaurants.map((restaurant)=>{
+                (filteredRestaurants?.length === 0 ? <h1>No data match your filter</h1> :
+              filteredRestaurants?.map((restaurant)=>{
                 return  (
-                <Link className='relative transition-all hover:scale-95 ' to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
+                <Link className='relative transition-all hover:scale-95 ' to={"/restaurant/" + restaurant?.info.id} key={restaurant?.info.id}>
                 <RestaurantCard {...restaurant.info} />
                 </Link>
                 // console.log(restaurant.info)
                 )
-              })}
+              }))}
             </div>
 
         </div>

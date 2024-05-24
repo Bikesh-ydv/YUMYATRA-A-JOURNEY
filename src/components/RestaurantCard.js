@@ -32,7 +32,7 @@ const RestaurantCard = (
                                     <span>{avgRating} • </span>{sla.slaString}
                                 </div>
 
-            <p className='font-GrotThin text-color-4 tracking-tight text-base -mb-1'>{truncateCuisine(cuisines?.join(","))}</p>
+            <p className='font-GrotThin text-color-4 tracking-tight text-base -mb-1'>{truncateCuisine(cuisines.join(","))}</p>
             <div className='font-GrotThin text-color-4 tracking-tight text-base'>{areaName}</div>
             </div>
         </div>
