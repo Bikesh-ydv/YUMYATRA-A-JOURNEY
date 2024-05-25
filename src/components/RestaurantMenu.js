@@ -86,19 +86,19 @@ const RestaurantMenu = ()=>{
         duration: 1500,
       }} />
 
-            <div className="flex h-52 justify-center align-middle overflow-y-hidden bg-gray-500 text-cyan-50 ">
+            <div className="w-fit sm:w-full md:w-full lg:w-full flex h-52 justify-center align-middle overflow-y-hidden bg-gray-500 text-cyan-50 ">
             <img 
             className="w-70 h-50   "
             src= {IMG_CDN_URL+ restaurantInfo.cloudinaryImageId}></img>
-            <div className="flex flex-col m-5">
+            <div className="flex flex-col m-2 w-[400px]">
               <h2 className=" text-2xl max-w-lg text-opacity-70">{restaurantInfo.name}</h2>
               <h3 className="flex-nowrap opacity-70 text-base max-w-lg">{restaurantInfo.areaName}</h3>
               <h4 className="flex-nowrap opacity-70 text-base max-w-lg">{restaurantInfo.avgRating} Ratings</h4>
             </div>
             </div>
             <div className=" flex justify-between flex-col border">
-            <div className="my-[10px] w-[400px] md:w-[700px] lg:w-[850px] mx-auto border-2 shadow-md pb-5 z-20 bg-green-400">
-                        <h2 className="text-center text-2xl">Menu Cards</h2>
+            <div className="my-[10px] w-[400px] md:w-[700px] lg:w-[850px] mx-2 sm:mx-auto md:mx-auto lg:mx-auto border-2 shadow-md pb-5 z-20 bg-green-400">
+                        <h2 className="text-center text-2xl ">Menu Cards</h2>
                         
                       </div>
                { 
@@ -106,7 +106,7 @@ const RestaurantMenu = ()=>{
 
                     
 
-                  <div className="flex flex-col mt-[5px] w-[400px] md:w-[700px] lg:w-[850px] mx-auto text-center hover:shadow-md z-20  " key={item?.id}>
+                  <div className="flex flex-col mx-2 sm:mx-auto md:mx-auto lg:mx-auto mt-[5px] w-[400px] md:w-[700px] lg:w-[850px] text-center hover:shadow-md z-20  " key={item?.id}>
                      <div className="ml-[10px]">
                        <h3 className=" flex flex-initial overflow-hidden text-2xl">{item?.name}</h3> 
                         <p className="text-start">Rs {getItemPrice(item)}</p> 

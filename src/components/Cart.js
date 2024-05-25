@@ -47,7 +47,7 @@ const Cart= ()=>{
         src="https://www.adasglobal.com/img/empty-cart.png"></img>
          <h1 className="text-2xl font-semi text-center text-gray-600">Looks like you have not added anything to your cart. Go ahead & explore items in menu.</h1>
    
-    <button className="my-[10px] mx-auto border-green-600 hover:bg-white hover:text-green-600 w-[120px] border bg-green-600  font-bold  text-white"> <Link to = {"/"}>Go to homepage</Link></button>
+    <button className="my-[10px] mx-auto border-green-600 hover:bg-white hover:text-green-600 w-[125px] h-19 p-2 border bg-green-600  font-bold  text-white"> <Link to = {"/"}>Go to homepage</Link></button>
    
     </div>
    ):(
@@ -58,7 +58,7 @@ const Cart= ()=>{
         position: 'top-center',
         duration: 1500,
           }} />
-           <div className="my-[10px] w-[350px] md:w-[450px] lg:w-[850px] mx-auto border-2 shadow-md p-2  z-20 bg-green-600">
+           <div className="my-[10px] w-[400px] md:w-[700px] lg:w-[850px] mx-2 sm:mx-auto md:mx-auto lg:mx-auto border-2 shadow-md p-2  z-20 bg-green-600">
                         <h2 className="text-center text-2xl font-bold my-auto">Cart Items</h2>
                         
                       </div>
@@ -66,7 +66,7 @@ const Cart= ()=>{
              { 
                  cartItems.map((item) =>(
                   
-                  <div className="flex flex-col mx-auto w-[350px] md:w-[450px] lg:w-[550px] hover:shadow-md z-20" key={item?.id}>
+                  <div className="flex flex-col mx-2 sm:mx-auto md:mx-auto lg:mx-auto w-[400px] md:w-[700px] lg:w-[850px] hover:shadow-md z-20" key={item?.id}>
                      {totalCost(item)}
                      <div>
                       
@@ -102,11 +102,11 @@ const Cart= ()=>{
         duration: 1500,
           }} />
 
-                    <div className="flex w-[350px] md:w-[450px] lg:w-[850px] h-[50px] my-2 justify-between mx-auto bg-green-600">
+                    <div className="flex w-[400px] md:w-[700px] lg:w-[850px] h-[50px] my-2 justify-between mx-2 sm:mx-auto md:mx-auto lg:mx-auto bg-green-600">
                         <h1 className="text-xl font-bold text-white my-auto ml-[8px]">Total Price</h1>
                         <h1 className="text-xl font-bold text-white my-auto mr-[8px]">Rs {sum}</h1>
                     </div>
-                    <div className="flex justify-around w-[300px] md:w-[450px] lg:w-[850px] mx-auto h-[50px]   ">
+                    <div className="flex justify-around w-[400px] md:w-[700px] lg:w-[850px] mx-2 sm:mx-auto md:mx-auto lg:mx-auto h-[50px]   ">
                    
                     <button 
                     onClick={()=>getPlaceOrder()}

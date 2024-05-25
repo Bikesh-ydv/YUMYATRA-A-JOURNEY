@@ -11,13 +11,13 @@ console.log(cartItems)
     return(
 
 
-        <div className="flex border-2 justify-between  shadow-md pb-5 z-20" >
+        <div className="flex border-2 justify-between shadow-md pb-1 z-10 w-fit sm:w-full md:w-full lg:w-full " >
             <div className="main-logo">
                 <h1 className="pl-2 py-4 text-green-600 text-2xl font-bold"> <Link to={"/"}>YUMYATRA </Link></h1>
                 {/* <img src="{image}"></img> */}
             </div>
-            <div className="nav-items mt-[10px] ">
-                <ul className="flex py-2 pr-1 text-md">
+            <div className="nav-items mt-[10px] space-x-2">
+                <ul className="flex py-2 pr-1 text-xl">
                 <li className="text-gray-600  hover:text-gray-900 px-2"> <Link to={"/"}> Home </Link> </li>
                 <li className="text-gray-600  hover:text-gray-900 px-2"><Link to={"/contact"}>Contact</Link></li>
                 <li className="text-gray-600  hover:text-gray-900 px-2"> <Link to={"/about"}>About </Link></li>
