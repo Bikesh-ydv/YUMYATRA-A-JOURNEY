@@ -3,7 +3,7 @@ const About = ()=>{
     return(
         <div className="">
             <div className="text-center mt-2 w-[360px] md:w-[460px] h-[63px] mx-auto  rounded-2xl bg-orange-400 text-gray-600">
-                <h1 className="text-2xl font-mono mt-2 font-bold p-2">About dev</h1>
+                <h1 className="text-2xl font-mono mt-2 font-bold p-2">About Me</h1>
                 {/* <hr className="my-1"></hr> */}
             </div>
             <div className=" mx-auto  rounded-xl bg-orange-400 w-[330px] md:w-[390px]">
