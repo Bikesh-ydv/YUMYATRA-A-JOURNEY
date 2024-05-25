@@ -93,7 +93,7 @@ const Body = () => {
        
        <div>
             
-            <div className="flex flex-col items-center my-8 ">
+            <div className="flex flex-col items-center my-8 w-full">
     {/* <div>
     <span class="text-xl uppercase cursor-pointer sm:text-2xl font-ProximaNovaBold text-center">Food Kitchen</span>
     </div> */}

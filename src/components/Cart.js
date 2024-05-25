@@ -58,7 +58,7 @@ const Cart= ()=>{
         position: 'top-center',
         duration: 1500,
           }} />
-           <div className="my-[10px] w-[400px] md:w-[700px] lg:w-[850px] mx-2 sm:mx-auto md:mx-auto lg:mx-auto border-2 shadow-md p-2  z-20 bg-green-600">
+           <div className="my-[10px] w-[342px] md:w-[700px] lg:w-[850px] mx-auto  border-2 shadow-md p-2  z-20 bg-green-600">
                         <h2 className="text-center text-2xl font-bold my-auto">Cart Items</h2>
                         
                       </div>
@@ -66,7 +66,7 @@ const Cart= ()=>{
              { 
                  cartItems.map((item) =>(
                   
-                  <div className="flex flex-col mx-2 sm:mx-auto md:mx-auto lg:mx-auto w-[400px] md:w-[700px] lg:w-[850px] hover:shadow-md z-20" key={item?.id}>
+                  <div className="flex flex-col mx-auto px-1  w-[342px] md:w-[700px] lg:w-[850px] hover:shadow-md z-20" key={item?.id}>
                      {totalCost(item)}
                      <div>
                       
@@ -102,11 +102,11 @@ const Cart= ()=>{
         duration: 1500,
           }} />
 
-                    <div className="flex w-[400px] md:w-[700px] lg:w-[850px] h-[50px] my-2 justify-between mx-2 sm:mx-auto md:mx-auto lg:mx-auto bg-green-600">
+                    <div className="flex w-[342px] md:w-[700px] lg:w-[850px] h-[50px] my-2 justify-between mx-auto sm:mx-auto md:mx-auto lg:mx-auto bg-green-600">
                         <h1 className="text-xl font-bold text-white my-auto ml-[8px]">Total Price</h1>
                         <h1 className="text-xl font-bold text-white my-auto mr-[8px]">Rs {sum}</h1>
                     </div>
-                    <div className="flex justify-around w-[400px] md:w-[700px] lg:w-[850px] mx-2 sm:mx-auto md:mx-auto lg:mx-auto h-[50px]   ">
+                    <div className="flex justify-around w-[342px] md:w-[700px] lg:w-[850px] mx-auto  h-[50px]   ">
                    
                     <button 
                     onClick={()=>getPlaceOrder()}
