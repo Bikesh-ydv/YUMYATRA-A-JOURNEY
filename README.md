@@ -6,6 +6,9 @@ Key Features:
 🍴 Extensive Restaurant Listings: Powered by the Swiggy API, offering a diverse range of cuisines and dishes.
 🔍 Advanced Search and Filters: Helping users find exactly what they're craving in no time.
 🛒 Easy Order Management: Simple and intuitive order placement and tracking.
+
+
+
 Tech Stack:
 Frontend: React.js
 API Integration: Swiggy API
