@@ -14,3 +14,8 @@ Frontend: React.js
 API Integration: Swiggy API
 Styling: Tailwind CSS
 This project was a fantastic learning experience, enhancing my skills in API integration, state management, and responsive design
+
+
+## 🚀 Live Demo
+
+[Play the Snake Game Here](https://yumyatra-a-journey.vercel.app/) 
